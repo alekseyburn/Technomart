@@ -8,7 +8,9 @@
   <header class="main-header">
     <div class="top-header">
       <a class="header-caption">Техномарт</a>
-      <!-- форма поиска -->
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+        <input type="search" name="search" placeholder="Поиск:">
+      </form>
       <a class="bookmarks" href="#">Закладки: 0</a>
       <a class="cart" href="#">Корзина: 0</a>
       <a class="order" href="#">Оформить заказ</a>
@@ -37,7 +39,6 @@
     </nav>
   </header>
   <main class="container">
-    <!-- услуги -->
     <section class="offers">
       <h2 class="visually-hidden">Предложения</h2>
       <ul class="offers-list">
@@ -62,7 +63,14 @@
           <a href="#">Бесплатно</a>
         </li>
         <li class="offers-item slider">
-          <!-- radio buttons -->
+          <input class="visually-hidden btn-1" type="radio" id="btn-1" name="toggle" checked>
+          <input class="visually-hidden btn-2" type="radio" id="btn-2" name="toggle">
+          <div class="slider-controls">
+            <label class="slider-controls-item-1" for="btn-1"></label>
+            <label class="slider-controls-item-2" for="btn-2"></label>
+          </div>
+          <label class="slider-left" for="btn-1"></label>
+          <label class="slider-right" for="btn-2"></label>
           <div class="slide first-slide">
             <h3>Дрели</h3>
             <p>Соседям на радость!</p>
@@ -72,8 +80,6 @@
             <p>Настоящие мужские игрушки</p>
           </div>
           <a class="btn catalog-btn" href="#"></a>
-          <button><span class="visually-hidden">Назад</span></button>
-          <button><span class="visually-hidden">Вперед</span></button>
         </li>
       </ul>
     </section>
@@ -126,11 +132,14 @@
     <section class="services">
       <h2>Сервисы</h2>
       <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-      <ul class="services-list">
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Кредит</a></li>
-      </ul>
+      <input class="visually-hidden button1" type="radio" name="service-switch" id="button-1" checked>
+      <input class="visually-hidden button2" type="radio" name="service-switch" id="button-2">
+      <input class="visually-hidden button3" type="radio" name="service-switch" id="button-3">
+      <div class="label-controls">
+        <label for="button-1">Доставка</label>
+        <label for="button-2">Гарантия</label>
+        <label for="button-3">Кредит</label>
+      </div>
       <div class="services-description delivery-item">
         <h3>Доставка</h3>
         <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
@@ -206,5 +215,35 @@
       </p>
     </div>
   </footer>
+
+  <section class="modal modal-feedback">
+    <h2>Напишите нам</h2>
+    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label for="user-name">Ваше имя:</label>
+        <input class="feedback-modal" id="user-name" type="text" name="name" placeholder="Имя Фамилия" pattern="[A-Za-zА-Яа-яЁё]{1,}\s[A-Za-zА-Яа-яЁё]{1,}">
+      </p>
+      <p>
+        <label for="user-mail">Ваш E-mail:</label>
+        <input class="feedback-modal" id="user-mail" type="email" name="e-mail" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="user-text">Текст письма:</label>
+        <textarea class="feedback-modal" id="user-text" name="text" rows="5" placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="btn feedback-btn" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button">Закрыть</button>
+  </section>
+
+  <section class="modal modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <p>
+      <img src="img/map-big.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+    </p>
+    <button class="modal-close" type="button">
+      Закрыть
+    </button>
+  </section>
 </body>
 </html>
