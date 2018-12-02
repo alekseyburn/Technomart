@@ -233,6 +233,7 @@ a {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
+  margin: 0;
 }
 
 .offers-item > a {
@@ -295,4 +296,325 @@ a {
 
   font-size: 18px;
   line-height: 24px;
+}
+
+.products h2,
+.manufacturers h2 {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+  text-transform: uppercase;
+
+  background-color: #f9f5f0;
+}
+
+.catalog-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.catalog-item {
+  font-family: "PT Sans", Arial, sans-serif;
+
+  border: 1px solid #eaeaea;
+}
+
+.catalog-item:hover,
+.catalog-item:focus {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.catalog-item h3 {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.catalog-item h3 a {
+  color: #000000;
+}
+
+.catalog-item p {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.old-price {
+  color: #a9a9a9;
+  text-decoration: line-through;
+}
+
+.current-price {
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+.catalog-item:hover .catalog-btns,
+.catalog-item:focus .catalog-btns {
+  display: block;
+}
+
+.catalog-btns {
+  display: none;
+
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.buy-btn {
+  background-color: #63a63e;
+}
+
+.buy-btn:hover,
+.buy-btn:focus {
+  background-color: #5fbb2d;
+}
+
+.buy-btn:active {
+  background-color: #518534;
+}
+
+.to-bookmarks-btn {
+  color: #32425c;
+
+  background-color: #ffffff;
+  border: 3px solid #63a63e;
+}
+
+.to-bookmarks-btn:hover,
+.to-bookmarks-btn:focus {
+  background-color: #ffffff;
+  border-color: #32425c;
+}
+
+.to-bookmarks-btn:active {
+  opacity: 0.3;
+}
+
+.manufacturers-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.manufacturers-list li {
+  border: 1px solid #eaeaea;
+}
+
+.manufacturers-list li:hover,
+.manufacturers-list li:focus {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.manufacturers-list li:active {
+  box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+  opacity: 0.3;
+}
+
+.services {
+  background-color: #f4f8f9;
+}
+
+.services h2,
+.about-company h2,
+.contact-info h2 {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.services p,
+.about-company p,
+.contact-info p {
+  margin: 0;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.label-controls {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.label-controls label {
+  background-color: #32425c;
+  border-bottom: 1px solid #4e637c;
+}
+
+.button1:checked ~ .label-controls label[for=button-1],
+.button2:checked ~ .label-controls label[for=button-2],
+.button3:checked ~ .label-controls label[for=button-3] {
+  color: #32425c;
+
+  background: #ffffff;
+}
+
+.services-description {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.services-description li {
+  display: none;
+}
+
+.services-description h3 {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: #32425c;
+}
+
+.button1:checked ~ .services-description .delivery-item,
+.button2:checked ~ .services-description .guarantee-item,
+.button3:checked ~ .services-description .credit-item {
+  display: block;
+}
+
+.companies-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.companies-list li {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.main-footer {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.top-footer {
+  background-color: #32425c;
+}
+
+.footer-caption {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  background-color: #ee3643;
+}
+
+.footer-caption:hover,
+.footer-caption:focus {
+  background-color: #ca2c37;
+}
+
+.footer-caption:active {
+  background-color: #ba2732;
+}
+
+.top-footer address {
+  font-style: normal;
+}
+
+.top-footer a {
+  color: #ffffff;
+}
+
+.footer-navigation ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.second-row-nav a {
+  color: #ffd180;
+}
+
+.footer-navigation a:hover,
+.footer-navigation a:focus {
+  text-decoration: underline;
+}
+
+.footer-navigation a:active {
+  text-decoration: none;
+
+  opacity: 0.5;
+}
+
+.footer-bottom {
+  background-color: #293449;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.footer-bottom ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer-bottom a {
+  color: #ffd180;
+}
+
+.footer-bottom a:hover,
+.footer-bottom a:focus {
+  text-decoration: underline;
+}
+
+.footer-bottom a:active {
+  color: #ee3643;
+  text-decoration: none;
+}
+
+.modal-feedback p {
+  margin: 0;
+}
+
+.feedback-form label {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  line-height: 18px;
+  font-family: "PT Sans", "Arial", sans-serif;
+
+  border: 2px solid #dee3e4;
+}
+
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+  color: #a9a9a9;
+}
+
+.feedback-btn {
+  border: none;
 }

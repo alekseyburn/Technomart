@@ -32,7 +32,7 @@
         <ul class="site-navigation">
           <li><a>Главная</a></li>
           <li><a href="#">Компания</a></li>
-          <li><a href="#">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Спецпредложения</a></li>
           <li><a href="#">Доставка</a></li>
@@ -94,44 +94,44 @@
     <section class="products">
       <h2>Популярные товары:</h2>
       <a class="btn product-btn" href="#">Все популярные товары</a>
-      <ul class="products-list">
-        <li class="products-item">
+      <ul class="catalog-list">
+        <li class="catalog-item">
           <img src="img/img-bosh-bfg-9000.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
-          <h3>Перфоратов BOSCH BFG 9000</h3>
+          <h3><a href="#">Перфоратов BOSCH BFG 9000</a></h3>
           <p class="old-price">32500 Р.</p>
           <p class="current-price">25500 Р.</p>
           <div class="catalog-btns">
-            <a class="btn-buy" href="#">Купить</a>
-            <a class="btn to-bookmarks" href="#">В закладки</a>
+            <a class="btn buy-btn" href="#">Купить</a>
+            <a class="btn to-bookmarks-btn" href="#">В закладки</a>
           </div>
         </li>
-        <li class="products-item">
+        <li class="catalog-item">
           <img src="img/img-bosch-bfg-3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
-          <h3>Перфоратор BOSCH BFG 3000</h3>
+          <h3><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
           <p class="old-price">22500 Р.</p>
           <p class="current-price">15500 Р.</p>
           <div class="catalog-btns">
-            <a class="btn-buy" href="#">Купить</a>
-            <a class="btn to-bookmarks" href="#">В закладки</a>
+            <a class="btn buy-btn" href="#">Купить</a>
+            <a class="btn to-bookmarks-btn" href="#">В закладки</a>
           </div>
         </li>
-        <li class="products-item">
+        <li class="catalog-item">
           <img src="img/img-bosch-bfg-6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
-          <h3>Перфоратор BOSCH BFG 6000</h3>
+          <h3><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
           <p class="old-price">30500 Р.</p>
           <p class="current-price">25500 Р.</p>
           <div class="catalog-btns">
-            <a class="btn-buy" href="#">Купить</a>
-            <a class="btn to-bookmarks" href="#">В закладки</a>
+            <a class="btn buy-btn" href="#">Купить</a>
+            <a class="btn to-bookmarks-btn" href="#">В закладки</a>
           </div>
         </li>
-        <li class="products-item new">
+        <li class="catalog-item new">
           <img src="img/img-bosch-bfg-2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
-          <h3>Перфоратор BOSCH BFG 2000</h3>
+          <h3><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
           <p class="current-price">12500 Р.</p>
           <div class="catalog-btns">
-            <a class="btn-buy" href="#">Купить</a>
-            <a class="btn to-bookmarks" href="#">В закладки</a>
+            <a class="btn buy-btn" href="#">Купить</a>
+            <a class="btn to-bookmarks-btn" href="#">В закладки</a>
           </div>
         </li>
       </ul>
@@ -163,19 +163,21 @@
         <label for="button-2">Гарантия</label>
         <label for="button-3">Кредит</label>
       </div>
-      <div class="services-description delivery-item">
-        <h3>Доставка</h3>
-        <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-      </div>
-      <div class="services-description guarantee-item">
-        <h3>Гарантия</h3>
-        <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-      </div>
-      <div class="services-description credit-item">
-        <h3>Кредит</h3>
-        <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-        <a class="btn btn-request" href="#">Отправить заявку</a>
-      </div>
+      <ul class="services-description">
+        <li class="delivery-item">
+          <h3>Доставка</h3>
+          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+        </li>
+        <li class="guarantee-item">
+          <h3>Гарантия</h3>
+          <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+        </li>
+        <li class="credit-item">
+          <h3>Кредит</h3>
+          <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+          <a class="btn btn-request" href="#">Отправить заявку</a>
+        </li>
+      </ul>
     </section>
     <section class="about-company">
       <h2>Компания «Техномарт»</h2>
@@ -240,15 +242,15 @@
   </footer>
 
   <section class="modal modal-feedback">
-    <h2>Напишите нам</h2>
+    <h2 class="visually-hidden">Напишите нам</h2>
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label for="user-name">Ваше имя:</label>
-        <input class="feedback-modal" id="user-name" type="text" name="name" placeholder="Имя Фамилия" pattern="[A-Za-zА-Яа-яЁё]{1,}\s[A-Za-zА-Яа-яЁё]{1,}">
+        <input class="feedback-modal" id="user-name" type="text" name="name" placeholder="Представьтесь, пожалуйста" pattern="[A-Za-zА-Яа-яЁё]{1,}\s[A-Za-zА-Яа-яЁё]{1,}">
       </p>
       <p>
         <label for="user-mail">Ваш E-mail:</label>
-        <input class="feedback-modal" id="user-mail" type="email" name="e-mail" placeholder="email@example.com">
+        <input class="feedback-modal" id="user-mail" type="email" name="e-mail" placeholder="Для отправки ответа">
       </p>
       <p>
         <label for="user-text">Текст письма:</label>
