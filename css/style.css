@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header {
+  font-size: 17px;
+  line-height: 18px;
+
+  background-color: #f3f7f8;
+}
+
+.top-header {
+  background-color: #293449;
+}
+
+.top-header a {
+  color: #ffffff;
+}
+
+.header-caption {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  background-color: #ee3643;
+}
+
+.header-caption:hover,
+.header-caption:focus {
+  background-color: #ca2c37;
+}
+
+.header-caption:active {
+  background-color: #ba2732;
+}
+
+.search-form input {
+  background-color: #293449;
+  border: none;
+}
+
+.search-form input::placeholder {
+  color: #ffffff;
+}
+
+.search-form input:hover {
+  background-color: #212a3a;
+}
+
+.search-form input:focus {
+  background-color: #ffffff;
+  outline: none;
+}
+
+.search-form input:focus::placeholder {
+  color: #000000;
+}
+
+.order {
+  background-color: #63a63e;
+}
+
+.order:hover,
+.order:focus {
+  background-color: #5fbb2d;
+}
+
+.order:active {
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: #518534;
+}
+
+.bookmarks:hover,
+.bookmarks:focus,
+.cart:hover,
+.cart:focus {
+  background-color: #212a3a;
+}
+
+.bookmarks:active,
+.cart:active {
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: #161d29;
+}
+
+.middle-header h1 {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #ee3643;
+  font-style: italic;
+}
+
+.phone {
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+
+  border: 3px solid #ffffff;
+}
+
+.contacts address {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+  font-style: normal;
+}
+
+.login-menu {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.login-menu a {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.login-menu a:hover,
+.login-menu a:focus {
+  color: #ee3643;
+}
+
+.login-menu a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-navigation {
+  line-height: 17px;
+}
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  background-color: #32425c;
+}
+
+.site-navigation a {
+  color: #ffffff;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  background-color: #293449;
+}
+
+.site-navigation a:active {
+  color: rgba(255, 255, 255, 0.5);
+
+  background-color: #1d2739;
+}
