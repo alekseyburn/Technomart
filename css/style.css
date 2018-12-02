@@ -14,6 +14,26 @@ a {
   text-decoration: none;
 }
 
+.btn {
+  font-size: 14px;
+  line-height: 18px;
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #ee3643;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #ca2c37;
+}
+
+.btn:active {
+  background-color: #ba2732;
+}
+
 .main-header {
   font-size: 17px;
   line-height: 18px;
@@ -172,4 +192,107 @@ a {
   color: rgba(255, 255, 255, 0.5);
 
   background-color: #1d2739;
+}
+
+.offers {
+  color: #ffffff;
+}
+
+.offers-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.materials {
+  background-color: #ffbf47;
+}
+
+.instruments {
+  background-color: #3bbce3;
+}
+
+.technics {
+  background-color: #dc91d8;
+}
+
+.sale {
+  background-color: #8ed78f;
+}
+
+.delivery {
+  background-color: #ffc047;
+}
+
+.slider {
+  background-color: #2c1b16;
+}
+
+.offers-item h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.offers-item > a {
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.offers-item > a:hover,
+.offers-item > a:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.offers-item > a:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.btn-1:checked ~ .slider-list .slider-item:nth-child(1) {
+  display: block;
+}
+
+.btn-2:checked ~ .slider-list .slider-item:nth-child(2) {
+  display: block;
+}
+
+.slider-item:nth-child(1) {
+  display: none;
+
+  background-image: url("../img/bg-drill.jpg");
+  background-repeat: no-repeat;
+}
+
+.slider-item:nth-child(2) {
+  display: none;
+
+  background-image: url("../img/bg-puncher.jpg");
+  background-repeat: no-repeat;
+}
+
+.slider-item h3 {
+  margin: 0;
+
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.slider-item p {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 24px;
 }
