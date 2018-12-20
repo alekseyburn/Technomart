@@ -35,9 +35,9 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus),
-.filter-input-radio.visually-hidden,
-.filter-input-checkbox.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -80,9 +80,12 @@ img {
   width: 960px;
   margin: 0 auto;
   padding: 0 10px;
+  /*grid-column: 2/3;*/
 }
 
 .main-header {
+  margin-bottom: 59px;
+
   font-size: 17px;
   line-height: 18px;
 
@@ -146,6 +149,18 @@ img {
   background-color: #8e1e26;
 }
 
+.search-form {
+  position: relative;
+}
+
+.search-form svg {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+
+  opacity: 0.3;
+}
+
 .search-form input {
   width: 270px;
   padding: 11px 49px 12px;
@@ -162,21 +177,76 @@ img {
   background-color: #212a3a;
 }
 
+.search-form input:hover + svg {
+  opacity: 1;
+}
+
 .search-form input:focus {
   background-color: #ffffff;
   outline: none;
+}
+
+.search-form input:focus + svg path {
+  opacity: 1;
+
+  fill: #ee3643;
 }
 
 .search-form input:focus::placeholder {
   color: #000000;
 }
 
+
 .bookmarks {
+  position: relative;
+
   padding: 12px 28px 12px 44px;
 }
 
+.bookmarks svg {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+
+  width: 14px;
+  height: 16px;
+
+  opacity: 0.3;
+}
+
+.bookmarks:hover svg,
+.bookmarks:focus svg {
+  opacity: 1;
+}
+
+.bookmarks:active svg {
+  opacity: 0.5;
+}
+
 .cart {
+  position: relative;
+
   padding: 12px 31px 12px 50px;
+}
+
+.cart svg {
+  position: absolute;
+  top: 12px;
+  left: 18px;
+
+  width: 15px;
+  height: 15px;
+
+  opacity: 0.3;
+}
+
+.cart:hover svg,
+.cart:focus svg {
+  opacity: 1;
+}
+
+.cart:active svg {
+  opacity: 0.5;
 }
 
 .order {
@@ -233,6 +303,8 @@ img {
 }
 
 .phone {
+  position: relative;
+
   display: inline-block;
   margin-bottom: 4px;
   padding: 10px 50px 8px 71px;
@@ -243,6 +315,18 @@ img {
   color: #ee3643;
 
   border: 3px solid #ffffff;
+}
+
+.phone::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 12px;
+
+  width: 19px;
+  height: 19px;
+
+  background-image: url("../img/icon-phone.svg");
 }
 
 .contacts address {
@@ -266,6 +350,8 @@ img {
 }
 
 .login-menu a {
+  position: relative;
+
   display: inline-block;
   padding: 12px 0;
 
@@ -292,6 +378,28 @@ img {
 .login-link a {
   padding-right: 26px;
   padding-left: 47px;
+}
+
+.login-link a::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  width: 20px;
+  height: 17px;
+
+  background-image: url("../img/icon-login.svg");
+  opacity: 0.3;
+}
+
+.login-link a:hover::after,
+.login-link a:focus::after {
+  opacity: 1;
+}
+
+.login-link a:active::after {
+  opacity: 0.3;
 }
 
 .registration-link a {
@@ -362,47 +470,89 @@ img {
   background-color: #1d2739;
 }
 
-.container {
-  grid-column: 2/3;
-}
-
 .offers {
   color: #ffffff;
 }
 
+main {
+  grid-column: 1/-1;
+}
+
 .offers-list {
+  display: grid;
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.offers-list li {
+  background-repeat: no-repeat;
 }
 
 .materials {
   background-color: #ffbf47;
+  background-image: url("../img/icon-materials.svg");
+  background-position: 213px 31px;
+
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
 .instruments {
   background-color: #3bbce3;
+  background-image: url("../img/icon-instruments.svg");
+  background-position: 197px 33px;
+
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
 
 .technics {
   background-color: #dc91d8;
+  background-image: url("../img/icon-technics.svg");
+  background-position: 191px 31px;
+
+  grid-column: 3/4;
+  grid-row: 1/2;
 }
 
 .sale {
   background-color: #8ed78f;
+  background-image: url("../img/icon-sale.svg");
+  background-position: 196px 26px;
+
+  grid-column: 3/4;
+  grid-row: 2/3;
 }
 
 .delivery {
   background-color: #ffc047;
+  background-image: url("../img/icon-delivery.svg");
+  background-position: 191px 32px;
+
+  grid-column: 3/4;
+  grid-row: 3/4;
 }
 
 .slider {
+  position: relative;
+
   background-color: #2c1b16;
+
+  grid-column: 1/3;
+  grid-row: 2/4;
 }
 
 .offers-item h3 {
   margin: 0;
+  margin-bottom: 12px;
+  padding-top: 21px;
+  padding-left: 23px;
 
   font-weight: 700;
   font-size: 24px;
@@ -410,12 +560,21 @@ img {
 }
 
 .offers-item > a {
+  display: inline-block;
+  width: 135px;
+  margin-bottom: 22px;
+  margin-left: 25px;
+  padding: 10px 10px;
+
   font-size: 14px;
   line-height: 18px;
+  vertical-align: middle;
+  text-align: center;
   color: #ffffff;
   text-transform: uppercase;
 
   background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
 }
 
 .offers-item > a:hover,
@@ -434,12 +593,50 @@ img {
   list-style: none;
 }
 
+.slider-controls {
+  position: absolute;
+  bottom: 36px;
+  left: 295px;
+
+  display: flex;
+  justify-content: space-between;
+  width: 30px;
+  height: 10px;
+}
+
+.slider-controls label {
+  position: relative;
+
+  display: block;
+  width: 10px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
 .btn-1:checked ~ .slider-list .slider-item:nth-child(1) {
   display: block;
 }
 
 .btn-2:checked ~ .slider-list .slider-item:nth-child(2) {
   display: block;
+}
+
+.btn-1:checked ~ .slider-controls .slider-controls-item-1::before,
+.btn-2:checked ~ .slider-controls .slider-controls-item-2::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  z-index: 2;
+
+  width: 6px;
+  height: 6px;
+
+  background: #ee3643;
+  border-radius: 50%;
 }
 
 .slider-item:nth-child(1) {
@@ -458,6 +655,10 @@ img {
 
 .slider-item h3 {
   margin: 0;
+  margin-bottom: 2px;
+  padding: 0;
+  padding-top: 23px;
+  padding-left: 23px;
 
   font-size: 36px;
   line-height: 36px;
@@ -466,9 +667,48 @@ img {
 
 .slider-item p {
   margin: 0;
+  margin-bottom: 121px;
+  padding-left: 24px;
 
   font-size: 18px;
   line-height: 24px;
+}
+
+.catalog-btn {
+  display: inline-block;
+  margin-bottom: 22px;
+  margin-left: 25px;
+  padding: 10px 48px;
+
+  vertical-align: middle;
+
+  border-radius: 5px;
+}
+
+.slider-left {
+  position: absolute;
+  top: 114px;
+  left: 25px;
+
+  width: 22px;
+  height: 40px;
+
+  background-image: url("../img/icon-left-arrow.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.slider-right {
+  position: absolute;
+  top: 114px;
+  right: 20px;
+
+  width: 22px;
+  height: 40px;
+
+  background-image: url("../img/icon-right-arrow.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .products h2,
