@@ -493,6 +493,8 @@ main {
 }
 
 .offers-list li {
+  position: relative;
+
   background-repeat: no-repeat;
 }
 
@@ -608,6 +610,7 @@ main {
 
 .slider-controls label {
   position: relative;
+  z-index: 1;
 
   display: block;
   width: 10px;
@@ -691,6 +694,7 @@ main {
   position: absolute;
   top: 114px;
   left: 25px;
+  z-index: 1;
 
   width: 22px;
   height: 40px;
@@ -704,6 +708,7 @@ main {
   position: absolute;
   top: 114px;
   right: 20px;
+  z-index: 1;
 
   width: 22px;
   height: 40px;
@@ -718,6 +723,10 @@ main {
   position: relative;
 
   margin-bottom: 21px;
+}
+
+.manufacturers {
+  margin-bottom: 65px;
 }
 
 .products h2,
@@ -775,19 +784,17 @@ main {
   margin-right: 0;
 }
 
-.new {
-  /*position: relative;*/
-}
-
 .new::after {
   content: "";
-  right: 0;
-  top: 0;
   position: absolute;
-  background-image: url("../img/img-flag.png");
+  top: 0;
+  right: 0;
+  z-index: 1;
+
   width: 60px;
   height: 59px;
-  z-index: 1;
+
+  background-image: url("../img/img-flag.png");
 }
 
 .catalog-item .img-wrapper {
@@ -980,6 +987,8 @@ main {
 }
 
 .services {
+  margin-bottom: 50px;
+
   background-color: #f4f8f9;
 }
 
@@ -994,6 +1003,11 @@ main {
   text-transform: uppercase;
 }
 
+.services h2 {
+  margin-bottom: 26px;
+  padding-top: 65px;
+}
+
 .services p,
 .about-company p,
 .contact-info p {
@@ -1002,14 +1016,48 @@ main {
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
+.services p {
+  width: 400px;
+  margin-bottom: 69px;
+}
+
+.services-slider {
+  display: flex;
+  justify-content: space-between;
+}
+
 .label-controls {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  margin-bottom: 101px;
+
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
   color: #ffffff;
 }
 
+.label-controls::after {
+  content: "";
+  position: absolute;
+  top: -44px;
+  right: 0;
+
+  width: 10px;
+  height: 272px;
+
+  background-image: url("../img/img-separator.png");
+  background-repeat: no-repeat;
+}
+
 .label-controls label {
+  padding-top: 13px;
+  padding-bottom: 17px;
+  padding-left: 22px;
+
   background-color: #32425c;
   border-bottom: 1px solid #4e637c;
 }
@@ -1020,9 +1068,11 @@ main {
   color: #32425c;
 
   background: #ffffff;
+  border-bottom-color: transparent;
 }
 
 .services-description {
+  width: 620px;
   margin: 0;
   padding: 0;
 
@@ -1030,16 +1080,72 @@ main {
 }
 
 .services-description li {
+  position: relative;
+
   display: none;
+}
+
+.delivery-item::after {
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: 0;
+
+  width: 468px;
+  height: 261px;
+
+  background-image: url("../img/img-delivery.png");
+  background-repeat: no-repeat;
+}
+
+.guarantee-item::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: -8px;
+
+  width: 389px;
+  height: 283px;
+
+  background-image: url("../img/img-guarantee.png");
+  background-repeat: no-repeat;
+}
+
+.credit-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+
+  width: 465px;
+  height: 285px;
+
+  background-image: url("../img/img-credit.png");
+  background-repeat: no-repeat;
 }
 
 .services-description h3 {
   margin: 0;
+  margin-bottom: 23px;
 
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   color: #32425c;
+  text-transform: uppercase;
+}
+
+.services-description p {
+  width: 300px;
+  margin: 0;
+  margin-bottom: 27px;
+}
+
+.btn-request {
+  display: inline-block;
+  padding: 9px 45px;
+
+  border-radius: 3px;
 }
 
 .button1:checked ~ .services-description .delivery-item,
