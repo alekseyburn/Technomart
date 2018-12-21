@@ -987,7 +987,7 @@ main {
 }
 
 .services {
-  margin-bottom: 50px;
+  margin-bottom: 79px;
 
   background-color: #f4f8f9;
 }
@@ -1154,18 +1154,97 @@ main {
   display: block;
 }
 
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-company {
+  width: 540px;
+}
+
+.about-company h2 {
+  margin-bottom: 26px;
+}
+
+.about-company p {
+  margin-bottom: 24px;
+
+  letter-spacing: 0.1px;
+}
+
+.about-company p:last-of-type {
+  margin-bottom: 20px;
+}
+
 .companies-list {
   margin: 0;
+  margin-bottom: 35px;
   padding: 0;
 
   list-style: none;
 }
 
 .companies-list li {
+  position: relative;
+
+  margin-bottom: 21px;
+  padding-left: 36px;
+
   font-size: 18px;
   line-height: 20px;
 }
 
+.companies-list li::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: #ee3463;
+}
+
+.about-btn {
+  display: inline-block;
+  margin-bottom: 86px;
+  padding: 10px 40px;
+
+  vertical-align: middle;
+
+  border-radius: 3px;
+}
+
+.contact-info {
+  flex-basis: 300px;
+}
+
+.contact-info h2 {
+  margin-bottom: 26px;
+}
+
+.contact-info p {
+  margin-bottom: 31px;
+}
+
+.contact-info p:last-of-type {
+  width: 300px;
+  height: 158px;
+  margin-bottom: 40px;
+}
+
+.write-btn {
+  display: inline-block;
+  width: 300px;
+  padding: 10px 30px;
+
+  vertical-align: middle;
+  text-align: center;
+
+  border-radius: 3px;
+}
 .main-footer {
   font-size: 18px;
   line-height: 24px;
