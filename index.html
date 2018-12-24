@@ -226,7 +226,7 @@
       <section class="contact-info">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-        <p><img src="img/map-small.jpg" alt="ул. Большая Конюшеная, д. 19" width="300" height="158"></p>
+        <p><a class="map-btn" href="map.html"><img src="img/map-small.jpg" alt="ул. Большая Конюшеная, д. 19" width="300" height="158"></a></p>
         <a class="btn write-btn" href="#">Заблудились? Напишите нам!</a>
       </section>
     </div>
@@ -298,7 +298,7 @@
       <div class="inputs-wrapper">
         <p>
           <label for="user-name">Ваше имя:</label>
-          <input class="feedback-modal" id="user-name" type="text" name="name" placeholder="Представьтесь, пожалуйста" pattern="[A-Za-zА-Яа-яЁё]{1,}\s[A-Za-zА-Яа-яЁё]{1,}">
+          <input class="feedback-modal" id="user-name" type="text" name="name" placeholder="Представьтесь, пожалуйста" pattern="[A-Za-zА-Яа-яЁё]{1,}">
         </p>
         <p>
           <label for="user-mail">Ваш E-mail:</label>
@@ -321,9 +321,7 @@
     <p>
       <img src="img/map-big.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
     </p>
-    <button class="modal-close" type="button">
-      Закрыть
-    </button>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 
   <section class="modal modal-added-to-card">
@@ -341,5 +339,6 @@
     + (location.host || 'localhost').split(':')[0]
     + ':35729/livereload.js?snipver=1"></'
     + 'script>')</script>
+    <script src="js/script.js"></script>
   </body>
   </html>

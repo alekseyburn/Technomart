@@ -230,10 +230,6 @@ input[type="radio"].visually-hidden {
   padding: 12px 10px 12px 50px;
 }
 
-.cart.not-empty {
-  background-color: #ee3643;
-}
-
 .cart svg {
   position: absolute;
   top: 12px;
@@ -284,6 +280,19 @@ input[type="radio"].visually-hidden {
   color: rgba(255, 255, 255, 0.6);
 
   background-color: #161d29;
+}
+
+.not-empty {
+  background-color: #ee3643;
+}
+
+.not-empty:hover,
+.not-empty:focus {
+  background-color: #ca2c37;
+}
+
+.not-empty:active {
+  background-color: #ba2732;
 }
 
 .middle-header {
@@ -2267,6 +2276,7 @@ input[type="radio"].visually-hidden {
 
 .modal-added-to-card {
   top: 312px;
+  z-index: 2;
 
   display: none;
   width: 620px;
@@ -2332,4 +2342,39 @@ input[type="radio"].visually-hidden {
 .continue-btn:hover,
 .continue-btn:focus {
   background-color: #ffffff;
+}
+
+.modal-show {
+  display: block;
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+}
+
+.modal-error {
+  animation-name: pulse;
+  animation-duration: 0.1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: translateX(-50%) scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: translateX(-50%) scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: translateX(-50%) scale3d(1, 1, 1);
+  }
 }
