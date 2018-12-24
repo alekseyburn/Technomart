@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body class="inner-page">
   <header class="main-header">
@@ -17,10 +17,10 @@
           <input type="search" name="search" placeholder="Поиск:" aria-label="Поиск по сайту">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"><path fill="#fff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
         </form>
-        <a class="bookmarks" href="#">Закладки: <output>0</output>
+        <a class="bookmarks" href="bookmarks.html">Закладки: <output>0</output>
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16"><path fill="#fff" d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/></svg>
         </a>
-        <a class="cart not-empty" href="#">Корзина: <output>10</output>
+        <a class="cart not-empty" href="cart.html">Корзина: <output>10</output>
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5" fill="#fff" /><circle cx="12.5" cy="13.5" r="1.5" fill="#fff" /><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#fff" /></svg>
         </a>
         <a class="order" href="#">Оформить заказ</a>
@@ -87,8 +87,8 @@
                   <div class="toggle toggle-max"></div>
                 </div>
                 <div class="price-controls">
-                  <label class="min-price"><span class="visually-hidden">от</span><input type="text" name="min-price" value="0"></label>
-                  <label class="max-price"><span class="visually-hidden">до</span><input type="text" name="max-price" value="30000"></label>
+                  <label class="min-price"><span class="visually-hidden">от</span><input type="text" class="input-price-field" id="min-price-field" name="min-price" min="0" max="30000" value="0"></label>
+                  <label class="max-price"><span class="visually-hidden">до</span><input type="text" name="max-price" class="input-price-field" id="max-price-field" min="0" max="30000" value="30000"></label>
                 </div>
               </div>
             </fieldset>
@@ -164,10 +164,10 @@
               <p class="old-price">22500 Р.</p>
               <p class="current-price">15500 Р.</p>
               <div class="catalog-btns">
-                <a class="btn buy-btn" href="#">Купить
+                <a class="btn buy-btn" href="to-cart.html">Купить
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5" fill="#fff" /><circle cx="12.5" cy="13.5" r="1.5" fill="#fff" /><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#fff" /></svg>
                 </a>
-                <a class="btn to-bookmarks-btn" href="#">В закладки</a>
+                <a class="btn to-bookmarks-btn" href="bookmarks.html">В закладки</a>
               </div>
             </li>
             <li class="catalog-item">
@@ -178,10 +178,10 @@
               <p class="old-price">30500 Р.</p>
               <p class="current-price">25500 Р.</p>
               <div class="catalog-btns">
-                <a class="btn buy-btn" href="#">Купить
+                <a class="btn buy-btn" href="to-cart.html">Купить
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5" fill="#fff" /><circle cx="12.5" cy="13.5" r="1.5" fill="#fff" /><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#fff" /></svg>
                 </a>
-                <a class="btn to-bookmarks-btn" href="#">В закладки</a>
+                <a class="btn to-bookmarks-btn" href="bookmarks.html">В закладки</a>
               </div>
             </li>
             <li class="catalog-item new">
@@ -192,10 +192,10 @@
               <p class="old-price"></p>
               <p class="current-price">12500 Р.</p>
               <div class="catalog-btns">
-                <a class="btn buy-btn" href="#">Купить
+                <a class="btn buy-btn" href="to-cart.html">Купить
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5" fill="#fff" /><circle cx="12.5" cy="13.5" r="1.5" fill="#fff" /><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#fff" /></svg>
                 </a>
-                <a class="btn to-bookmarks-btn" href="#">В закладки</a>
+                <a class="btn to-bookmarks-btn" href="bookmarks.html">В закладки</a>
               </div>
             </li>
             <li class="catalog-item">
@@ -206,10 +206,10 @@
               <p class="old-price">22500 Р.</p>
               <p class="current-price">15500 Р.</p>
               <div class="catalog-btns">
-                <a class="btn buy-btn" href="#">Купить
+                <a class="btn buy-btn" href="to-cart.html">Купить
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5" fill="#fff" /><circle cx="12.5" cy="13.5" r="1.5" fill="#fff" /><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#fff" /></svg>
                 </a>
-                <a class="btn to-bookmarks-btn" href="#">В закладки</a>
+                <a class="btn to-bookmarks-btn" href="bookmarks.html">В закладки</a>
               </div>
             </li>
             <li class="catalog-item new">
@@ -220,10 +220,10 @@
               <p class="old-price">30500 Р.</p>
               <p class="current-price">25500 Р.</p>
               <div class="catalog-btns">
-                <a class="btn buy-btn" href="#">Купить
+                <a class="btn buy-btn" href="to-cart.html">Купить
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5" fill="#fff" /><circle cx="12.5" cy="13.5" r="1.5" fill="#fff" /><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#fff" /></svg>
                 </a>
-                <a class="btn to-bookmarks-btn" href="#">В закладки</a>
+                <a class="btn to-bookmarks-btn" href="bookmarks.html">В закладки</a>
               </div>
             </li>
             <li class="catalog-item">
@@ -234,10 +234,10 @@
               <p class="old-price"></p>
               <p class="current-price">12500 Р.</p>
               <div class="catalog-btns">
-                <a class="btn buy-btn" href="#">Купить
+                <a class="btn buy-btn" href="to-cart.html">Купить
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5" fill="#fff" /><circle cx="12.5" cy="13.5" r="1.5" fill="#fff" /><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#fff" /></svg>
                 </a>
-                <a class="btn to-bookmarks-btn" href="#">В закладки</a>
+                <a class="btn to-bookmarks-btn" href="bookmarks.html">В закладки</a>
               </div>
             </li>
             <li class="catalog-item new">
@@ -248,10 +248,10 @@
               <p class="old-price">22500 Р.</p>
               <p class="current-price">15500 Р.</p>
               <div class="catalog-btns">
-                <a class="btn buy-btn" href="#">Купить
+                <a class="btn buy-btn" href="to-cart.html">Купить
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5" fill="#fff" /><circle cx="12.5" cy="13.5" r="1.5" fill="#fff" /><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#fff" /></svg>
                 </a>
-                <a class="btn to-bookmarks-btn" href="#">В закладки</a>
+                <a class="btn to-bookmarks-btn" href="bookmarks.html">В закладки</a>
               </div>
             </li>
             <li class="catalog-item">
@@ -262,10 +262,10 @@
               <p class="old-price">30500 Р.</p>
               <p class="current-price">25500 Р.</p>
               <div class="catalog-btns">
-                <a class="btn buy-btn" href="#">Купить
+                <a class="btn buy-btn" href="to-cart.html">Купить
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5" fill="#fff" /><circle cx="12.5" cy="13.5" r="1.5" fill="#fff" /><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#fff" /></svg>
                 </a>
-                <a class="btn to-bookmarks-btn" href="#">В закладки</a>
+                <a class="btn to-bookmarks-btn" href="bookmarks.html">В закладки</a>
               </div>
             </li>
             <li class="catalog-item">
@@ -276,10 +276,10 @@
               <p class="old-price"></p>
               <p class="current-price">12500 Р.</p>
               <div class="catalog-btns">
-                <a class="btn buy-btn" href="#">Купить
+                <a class="btn buy-btn" href="to-cart.html">Купить
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5" fill="#fff" /><circle cx="12.5" cy="13.5" r="1.5" fill="#fff" /><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#fff" /></svg>
                 </a>
-                <a class="btn to-bookmarks-btn" href="#">В закладки</a>
+                <a class="btn to-bookmarks-btn" href="bookmarks.html">В закладки</a>
               </div>
             </li>
           </ul>
@@ -403,10 +403,6 @@
       Закрыть
     </button>
   </section>
-  <script>document.write('<script src="http://'
-    + (location.host || 'localhost').split(':')[0]
-    + ':35729/livereload.js?snipver=1"></'
-    + 'script>')</script>
-    <script src="js/script.js"></script>
-  </body>
-  </html>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

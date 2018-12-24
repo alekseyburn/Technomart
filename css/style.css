@@ -20,6 +20,8 @@ body {
   color: #000000;
 
   background-color: #ffffff;
+
+  word-wrap: break-word;
 }
 
 a {
@@ -99,6 +101,11 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-bottom: 46px;
 }
 
@@ -165,7 +172,7 @@ input[type="radio"].visually-hidden {
 
 .search-form input {
   width: 270px;
-  height: 42px;
+  min-height: 42px;
   padding: 11px 49px 12px;
 
   background-color: #293449;
@@ -418,6 +425,7 @@ input[type="radio"].visually-hidden {
 
   font-size: 21px;
   line-height: 21px;
+  vertical-align: middle;
   color: #000000;
 
   background-color: #ffffff;
@@ -439,6 +447,7 @@ input[type="radio"].visually-hidden {
 .login-link a {
   padding-right: 26px;
   padding-left: 47px;
+  width: 122px;
 }
 
 .login-link a::after {
@@ -467,6 +476,7 @@ input[type="radio"].visually-hidden {
 .registration-link a {
   padding-right: 24px;
   padding-left: 24px;
+  width: 150px;
 }
 
 .main-navigation {
@@ -579,7 +589,7 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
-.logged-list li:last-child a::after {
+.logged-list li:nth-child(even) a::after {
   content: none;
 }
 
@@ -595,6 +605,7 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -611,11 +622,23 @@ input[type="radio"].visually-hidden {
   background-color: #32425c;
 }
 
-.site-navigation li:first-child a {
+.site-navigation::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+
+  height: 5px;
+
+  background-color: #293449;
+}
+
+.site-navigation li:nth-child(7n) a {
   padding-left: 52px;
 }
 
-.site-navigation li:last-child a {
+.site-navigation li:nth-child(6n) a {
   padding-right: 48px;
 }
 
@@ -626,18 +649,6 @@ input[type="radio"].visually-hidden {
   padding: 19px 31px;
 
   color: #ffffff;
-}
-
-.site-navigation a::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -5px;
-  left: 0;
-
-  height: 5px;
-
-  background-color: #293449;
 }
 
 .site-navigation a:hover,
@@ -651,7 +662,7 @@ input[type="radio"].visually-hidden {
   background-color: #1d2739;
 }
 
-.site-navigation a:active::after {
+.site-navigation:active::after {
   background-color: #1d2739;
 }
 
@@ -807,6 +818,7 @@ input[type="radio"].visually-hidden {
   margin-bottom: 12px;
   padding-top: 21px;
   padding-left: 23px;
+  width: 150px;
 
   font-weight: 700;
   font-size: 24px;
@@ -880,6 +892,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
   padding-top: 23px;
   padding-left: 23px;
+  width: 250px;
 
   font-size: 36px;
   line-height: 36px;
@@ -888,7 +901,7 @@ input[type="radio"].visually-hidden {
 
 .slider-item p {
   margin: 0;
-  margin-bottom: 121px;
+  margin-bottom: 122px;
   padding-left: 24px;
 
   font-size: 18px;
@@ -900,6 +913,7 @@ input[type="radio"].visually-hidden {
   margin-bottom: 22px;
   margin-left: 25px;
   padding: 10px 48px;
+  width: 196px;
 
   vertical-align: middle;
 
@@ -947,7 +961,7 @@ input[type="radio"].visually-hidden {
 
 .slider-controls label {
   position: relative;
-  z-index: 1;
+  z-index: 4;
 
   display: block;
   width: 10px;
@@ -1023,7 +1037,7 @@ input[type="radio"].visually-hidden {
 .manufacturers h2 {
   margin: 0;
   margin-bottom: 19px;
-  padding: 30px 28px 30px 27px;
+  padding: 30px 250px 30px 27px;
 
   font-weight: 400;
   font-size: 30px;
@@ -1343,7 +1357,9 @@ input[type="radio"].visually-hidden {
 .services p,
 .about-company p,
 .contact-info p {
+  position: relative;
   margin: 0;
+  z-index: 2;
 
   font-family: "PT Sans", "Arial", sans-serif;
 }
@@ -1496,7 +1512,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services-description p {
-  width: 300px;
+  width: 379px;
   margin: 0;
   margin-bottom: 27px;
 }
@@ -1504,7 +1520,9 @@ input[type="radio"].visually-hidden {
 .btn-request {
   display: inline-block;
   padding: 9px 45px;
+  width: 196px;
 
+  vertical-align: middle;
   border-radius: 3px;
 }
 
@@ -1783,6 +1801,7 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   width: 50%;
 
+  vertical-align: middle;
   text-transform: uppercase;
 }
 
@@ -1917,6 +1936,7 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   margin-top: 34px;
   padding: 9px 38px;
+  width: 140px;
 
   font-size: 13px;
   line-height: 18px;
@@ -1970,10 +1990,16 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0;
   margin-top: 10px;
   margin-right: 48px;
   padding: 0;
+  width: 355px;
 
   list-style: none;
   font-size: 13px;
@@ -2074,6 +2100,7 @@ input[type="radio"].visually-hidden {
 
 .pagination-item {
   margin-right: 11px;
+  margin-bottom: 11px;
 }
 
 .pagination-item:last-child {
@@ -2265,7 +2292,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-bottom {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 
   background-color: #293449;
 }
@@ -2322,6 +2349,7 @@ input[type="radio"].visually-hidden {
           align-items: center;
   width: 41px;
   height: 41px;
+  margin-bottom: 10px;
 
   background-color: #212a3a;
   border-radius: 50%;
@@ -2382,7 +2410,7 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-feedback {
-  z-index: 2;
+  z-index: 5;
 
   display: none;
   width: 620px;
@@ -2549,6 +2577,7 @@ input[type="radio"].visually-hidden {
 .modal-map {
   position: fixed;
   top: 256px;
+  z-index: 5;
 
   display: none;
   width: 940px;
@@ -2571,7 +2600,7 @@ input[type="radio"].visually-hidden {
 
 .modal-added-to-card {
   top: 312px;
-  z-index: 2;
+  z-index: 5;
 
   display: none;
   width: 620px;
